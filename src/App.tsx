@@ -12,7 +12,7 @@ const App = () => {
     const formControlSpeedInput = 'formControlSpeedInput';
 
     const [timeToAndromeda, setTimeToAndromeda] = useState(0);
-    const [units, setUnits] = useState<Unit>({name: 'Unit', conversion: 0});
+    const [units, setUnits] = useState<Unit>({name: 'Unit', oneLightYear: 0, baseSpeed: 0});
 
     const updateUnits = (eventKey: any) => {
         setUnits(UNIT_MAPPING[eventKey]);
@@ -40,7 +40,11 @@ const App = () => {
                 <Form.Group controlId={formControlSpeedInput}>
                     <Form.Label>{'How fast are you going?'}</Form.Label>
                     <InputGroup>
-                        <Form.Control type={'number'} placeholder={'Enter Speed'} required />
+                        <Form.Control
+                            type={'number'}
+                            step={'any'}
+                            placeholder={'Enter Speed'}
+                            required />
                             <DropdownButton
                                 as={InputGroup.Append}
                                 title={units.name}
