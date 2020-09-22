@@ -1,4 +1,4 @@
-How long will it take me to travel to the Andromeda galaxy? 
+How long will it take me to travel to the Andromeda galaxy? Choose from many different units!
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
